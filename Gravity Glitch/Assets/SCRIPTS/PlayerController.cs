@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     public PlayerInputActions inputActions;
     public Vector2 movementVector;
     public float movementSpeed = 5f;
+    public Camera playerCamera;
 
     // Start is called before the first frame update
     void Start()
@@ -56,7 +57,7 @@ public class PlayerController : MonoBehaviour
     {
         if (moveDirection.magnitude >= 0.1f)
         {
-            Vector3 relativeDirection = transform.right * moveDirection.x + transform.forward * moveDirection.z;
+            Vector3 relativeDirection = playerCamera.transform.right * moveDirection.x + playerCamera.transform.forward * moveDirection.z;
             Vector3 movement = relativeDirection * movementSpeed * Time.fixedDeltaTime;
 
             _rigidbody.MovePosition(transform.position + movement);

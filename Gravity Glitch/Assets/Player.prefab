@@ -140,6 +140,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementVector: {x: 0, y: 0}
   movementSpeed: 5
+  playerCamera: {fileID: 1441406277742616039}
 --- !u!1 &1441406277742616037
 GameObject:
   m_ObjectHideFlags: 0
